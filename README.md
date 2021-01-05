@@ -2,8 +2,8 @@
 
 #### Why do you need Queueing in JMeter scenario
 If you have a Producer Consumer kind of usecase
->> You have one producer threadgroup 
->> You have multiple consumer threadgroups that want to service the same producer
+* You have one producer threadgroup 
+* You have multiple consumer threadgroups that want to service the same producer
 
 #### How its implemented
 Inside Java code we have a simple singleton class with a ConcurrentLinkedDeque private object. We can put String objects and retrieve them from multiple threads.
