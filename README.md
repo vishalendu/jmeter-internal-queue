@@ -19,4 +19,4 @@ OR
 
 >**Note:** The ConcurrentQueueSingleton class being singleton, is a single copy for the jmeter instance. If you run a script multiple times from a gui, without using `clear()` method call, you will see that message count in the queue will keep on increasing. Please keep a close eye on the jmeter gc, since the queue is unbounded.
 
->**Note:** Additionally, If you want to be safe and not run out of memory on your jmeter script, you can implemant a BlockingQueue inside the singleton object.
+>**Note:** Additionally, If you want to be safe and not run out of memory on your jmeter script, you can implemant a LinkedBlockingDeque (bounded/blocking) inside the singleton object.  More details on bounded queue can be found here: https://www.baeldung.com/java-blocking-queue
